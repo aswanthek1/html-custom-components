@@ -58,7 +58,7 @@
     display: none;
 }
 
-.customCarousel.no-transition {
+.customCarousel.custom-no-transition {
     scroll-behavior: auto;
 }
 

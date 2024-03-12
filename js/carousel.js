@@ -27,9 +27,9 @@ const insertCopiesToLast = () => {
 }
 insertCopiesToLast()
 // Scroll the customCarousel at appropriate postition to hide first few duplicate customCards on Firefox
-customCarousel.classList.add("no-transition");
+customCarousel.classList.add("custom-no-transition");
 customCarousel.scrollLeft = customCarousel.offsetWidth;
-customCarousel.classList.remove("no-transition");
+customCarousel.classList.remove("custom-no-transition");
 
 // Add event listeners for the arrow buttons to scroll the customCarousel left and right
 arrowBtns.forEach(btn => {
@@ -60,15 +60,15 @@ const dragStop = () => {
 const infiniteScroll = () => {
     // If the customCarousel is at the beginning, scroll to the end
     if (customCarousel.scrollLeft === 0) {
-        customCarousel.classList.add("no-transition");
+        customCarousel.classList.add("custom-no-transition");
         customCarousel.scrollLeft = customCarousel.scrollWidth - (2 * customCarousel.offsetWidth);
-        customCarousel.classList.remove("no-transition");
+        customCarousel.classList.remove("custom-no-transition");
     }
     // If the customCarousel is at the end, scroll to the beginning
     else if (Math.ceil(customCarousel.scrollLeft) === customCarousel.scrollWidth - customCarousel.offsetWidth) {
-        customCarousel.classList.add("no-transition");
+        customCarousel.classList.add("custom-no-transition");
         customCarousel.scrollLeft = customCarousel.offsetWidth;
-        customCarousel.classList.remove("no-transition");
+        customCarousel.classList.remove("custom-no-transition");
     }
 
     // Clear existing timeout & start autoplay if mouse is not hovering over customCarousel
